@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Link } from "@mui/material";
+import { Box } from "@mui/system";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Map from "./pages/Map";
+import RealEstate from "./pages/RealEstate";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "50px 0" }}>
+      <BrowserRouter>
+        <Container maxWidth="lg">
+          <Box
+            sx={{
+              typography: "body1",
+              "& > :not(style) + :not(style)": {
+                ml: 2,
+              },
+            }}
+          >
+            <Link href={"/real-estate"}>Real Estate</Link>
+            <Link href={"/map"}>Map</Link>
+          </Box>
+        </Container>
+        <Routes>
+          <Route path="/" element={<Navigate to={"/real-estate"} />} />
+          <Route path="/real-estate" element={<RealEstate />} />
+          <Route path="/map" element={<Map />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
