@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/transaction/static/css/main.be0a9606.css",
+    "main.js": "/transaction/static/js/main.c4029509.js",
+    "index.html": "/transaction/index.html",
+    "main.be0a9606.css.map": "/transaction/static/css/main.be0a9606.css.map",
+    "main.c4029509.js.map": "/transaction/static/js/main.c4029509.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be0a9606.css",
+    "static/js/main.c4029509.js"
+  ]
+}
